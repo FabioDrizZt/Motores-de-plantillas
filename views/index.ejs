@@ -1,0 +1,14 @@
+<%- include('partials/head') %>
+<div class="container">
+  <h1><%= title %></h1>
+  <p><%= message %></p>
+  <a href="/contacto">Contactanos</a>
+  <ul>
+    <% products.forEach(p => { %>
+    <li>
+      <a href="/producto/<%= p.id %>"> <%= p.name %> - $ <%= p.price %> </a>
+    </li>
+    <% }) %>
+  </ul>
+</div>
+<%- include('partials/footer') %>
